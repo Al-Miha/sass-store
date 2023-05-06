@@ -58,6 +58,12 @@
       @content;
     }
   }
+
+  @if ($breakpoint==lg) {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  }
 }
 
 // ************ ABSTRACTS/_VARIABLES *************
@@ -252,7 +258,7 @@ html {
 
 // ************ COMPONENTS/_HEADING *************
 .heading {
-  grid-column: 4/7;
+  grid-column: 1/-1;
   grid-row: 2/3;
   text-align: center;
   background-color: red;
@@ -273,6 +279,10 @@ html {
   @include flexPosition(space-around);
   padding: 5rem 0;
   border-top: 0.1rem solid color(primary);
+
+  @include response(lg) {
+    flex-wrap: wrap;
+  }
 }
 
 .footer-nav {
@@ -284,6 +294,11 @@ html {
 }
 
 .contact {
+  @include response(lg) {
+    padding: 0 10rem;
+    order: 1;
+    margin-top: 4rem;
+  }
   &-heading {
     font-size: size(xl);
     color: color(primary);
@@ -392,11 +407,19 @@ $socialMediaColors: 1 #3b5998, 2 #b31217, 3 #dc4e41, 4 #55acee, 5 #517fa4,
   @include response(xl) {
     grid-column: 6/10;
   }
+
+  @include response(lg) {
+    grid-column: 5/10;
+  }
 }
 .second-nav {
   grid-column: 3/8;
   grid-row: 3/4;
   @include navigation;
+
+  @include response(lg) {
+    grid-column: 2/9;
+  }
 }
 // .dropdown {
 //   display: none;
@@ -455,14 +478,26 @@ $socialMediaColors: 1 #3b5998, 2 #b31217, 3 #dc4e41, 4 #55acee, 5 #517fa4,
     visibility: hidden;
     transition: all 1s 0.5s;
 
+    @include response(lg) {
+      padding: 1rem;
+    }
+
     &-heading {
       font-size: size(xl);
+
+      @include response(lg) {
+        font-size: size(md);
+      }
     }
 
     &-price {
       font-size: size(lg);
       font-weight: 300;
       margin: 1rem 0;
+
+      @include response(lg) {
+        font-size: size(sm);
+      }
 
       span {
         font-weight: 600;
@@ -477,6 +512,10 @@ $socialMediaColors: 1 #3b5998, 2 #b31217, 3 #dc4e41, 4 #55acee, 5 #517fa4,
       padding: 0.5rem 1rem;
       border: 0.1rem solid color(quaternary);
       background-color: lighten(color(primary), 20%);
+
+      @include response(lg) {
+        padding: 0.2rem 0.5rem;
+      }
     }
   }
 }
@@ -495,6 +534,10 @@ $socialMediaColors: 1 #3b5998, 2 #b31217, 3 #dc4e41, 4 #55acee, 5 #517fa4,
 
   @include response(xl) {
     height: 70vh;
+  }
+
+  @include response(lg) {
+    height: 60vh;
   }
 
   &-slide {
@@ -521,6 +564,10 @@ $socialMediaColors: 1 #3b5998, 2 #b31217, 3 #dc4e41, 4 #55acee, 5 #517fa4,
     left: 6rem;
     max-width: 40rem;
     padding: 5rem;
+
+    @include response(lg) {
+      padding: 2rem;
+    }
 
     h2 {
       font-size: size(xl) + 1.2rem;
