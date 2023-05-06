@@ -52,6 +52,14 @@
   }
 }
 
+@mixin response($breakpoint) {
+  @if ($breakpoint==xl) {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+
 // ************ ABSTRACTS/_VARIABLES *************
 
 $colors: (
@@ -380,6 +388,10 @@ $socialMediaColors: 1 #3b5998, 2 #b31217, 3 #dc4e41, 4 #55acee, 5 #517fa4,
   grid-column: 7/10;
   grid-row: 1/2;
   @include navigation;
+
+  @include response(xl) {
+    grid-column: 6/10;
+  }
 }
 .second-nav {
   grid-column: 3/8;
@@ -480,6 +492,10 @@ $socialMediaColors: 1 #3b5998, 2 #b31217, 3 #dc4e41, 4 #55acee, 5 #517fa4,
   position: relative;
   width: 100%;
   height: 80vh;
+
+  @include response(xl) {
+    height: 70vh;
+  }
 
   &-slide {
     position: absolute;
