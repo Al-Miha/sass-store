@@ -70,6 +70,12 @@
       @content;
     }
   }
+
+  @if ($breakpoint==sm) {
+    @media (max-width: 560px) {
+      @content;
+    }
+  }
 }
 
 // ************ ABSTRACTS/_VARIABLES *************
@@ -112,6 +118,10 @@ html {
   @include response(md) {
     // 9/16
     font-size: 56.25%;
+  }
+  @include response(sm) {
+    // 8/16
+    font-size: 50%;
   }
 }
 
@@ -386,8 +396,17 @@ html {
       border-radius: 100%;
       @include flexPosition;
 
+      @include response(sm) {
+        width: 3rem;
+        height: 3rem;
+      }
+
       i {
         font-size: size(md);
+
+        @include response(sm) {
+          font-size: size(sm);
+        }
       }
     }
   }
@@ -434,6 +453,10 @@ $socialMediaColors: 1 #3b5998, 2 #b31217, 3 #dc4e41, 4 #55acee, 5 #517fa4,
 
   @include response(md) {
     grid-column: 4/10;
+  }
+
+  @include response(sm) {
+    grid-column: 2/10;
   }
 }
 .second-nav {
@@ -510,11 +533,20 @@ $socialMediaColors: 1 #3b5998, 2 #b31217, 3 #dc4e41, 4 #55acee, 5 #517fa4,
       padding: 1rem;
     }
 
+    @include response(sm) {
+      background-color: transparent;
+      border: none;
+    }
+
     &-heading {
       font-size: size(xl);
 
       @include response(lg) {
         font-size: size(md);
+      }
+
+      @include response(sm) {
+        display: none;
       }
     }
 
@@ -527,6 +559,9 @@ $socialMediaColors: 1 #3b5998, 2 #b31217, 3 #dc4e41, 4 #55acee, 5 #517fa4,
         font-size: size(sm);
       }
 
+      @include response(sm) {
+        display: none;
+      }
       span {
         font-weight: 600;
       }
@@ -543,6 +578,10 @@ $socialMediaColors: 1 #3b5998, 2 #b31217, 3 #dc4e41, 4 #55acee, 5 #517fa4,
 
       @include response(lg) {
         padding: 0.2rem 0.5rem;
+      }
+      @include response(sm) {
+        padding: 0.5rem 0.7rem;
+        width: 7rem;
       }
     }
   }
@@ -594,6 +633,7 @@ $socialMediaColors: 1 #3b5998, 2 #b31217, 3 #dc4e41, 4 #55acee, 5 #517fa4,
     position: absolute;
     bottom: 6rem;
     left: 6rem;
+    right: 6rem;
     max-width: 40rem;
     padding: 5rem;
 
