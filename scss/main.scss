@@ -7,7 +7,7 @@
     justify-content: space-around;
     align-items: center;
     height: 100%;
-    background-color: orange;
+    //background-color: orange;
   }
   &-item {
     list-style: none;
@@ -134,7 +134,7 @@ html {
   grid-template-rows: repeat(4, min-content);
   row-gap: 1.6rem;
   background-color: color(tertiary);
-  border: 1px solid red;
+  //border: 1px solid red;
 }
 
 // ************ COMPONENTS *************
@@ -282,7 +282,7 @@ html {
   grid-column: 1/-1;
   grid-row: 2/3;
   text-align: center;
-  background-color: red;
+  //background-color: red;
 
   &-text {
     font-family: "Great Vibes", cursive;
@@ -434,7 +434,7 @@ $socialMediaColors: 1 #3b5998, 2 #b31217, 3 #dc4e41, 4 #55acee, 5 #517fa4,
   grid-template-rows: repeat(3, min-content);
   gap: 2rem;
   z-index: 100;
-  border: 1px solid yellow;
+  //border: 1px solid yellow;
 }
 
 // ************ LAYOUT/_NAVIGATION *************

@@ -24,7 +24,6 @@ html {
   grid-template-rows: repeat(4, min-content);
   row-gap: 1.6rem;
   background-color: #f2f0f1;
-  border: 1px solid red;
 }
 
 .btn {
@@ -130,7 +129,6 @@ html {
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  background-color: orange;
 }
 .dropdown-item {
   list-style: none;
@@ -166,7 +164,6 @@ html {
   grid-column: 1/-1;
   grid-row: 2/3;
   text-align: center;
-  background-color: red;
 }
 .heading-text {
   font-family: "Great Vibes", cursive;
@@ -356,7 +353,6 @@ html {
   grid-template-rows: repeat(3, min-content);
   gap: 2rem;
   z-index: 100;
-  border: 1px solid yellow;
 }
 
 .first-nav {
@@ -368,7 +364,6 @@ html {
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  background-color: orange;
 }
 .first-nav-item {
   list-style: none;
@@ -412,7 +407,6 @@ html {
   justify-content: space-around;
   align-items: center;
   height: 100%;
-  background-color: orange;
 }
 .second-nav-item {
   list-style: none;
