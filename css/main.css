@@ -585,6 +585,15 @@ html {
   height: inherit;
   object-fit: cover;
 }
+.slideshow .bc1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/img1.jpg") center/cover no-repeat fixed;
+}
+.slideshow .bc2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/img2.jpg") center/cover no-repeat fixed;
+}
+.slideshow .bc3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/img3.jpg") center/cover no-repeat fixed;
+}
 .slideshow-content {
   background-color: rgba(255, 255, 238, 0.9);
   position: absolute;
